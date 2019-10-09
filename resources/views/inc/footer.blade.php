@@ -22,7 +22,7 @@
                         <div class="footer-col-inner" style="text-align:center;">
                             <h3 style="color:white;">Connect with us</h3>
 
-                            <div class="footer-col col-md-7 col-mf-offset-1 col-sm-7 col-xs-12 col-xs-offset-0" style=" box-sizing:border-box;">
+                            <div class="footer-col col-md-12 col-mf-offset-1 col-sm-12 col-xs-12 col-xs-offset-0" style=" box-sizing:border-box;">
                                 <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdtutimes&tabs&width=270&height=70&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
                                     width="270" height="130" style="border:none;overflow:auto;margin:20px 0px;display:inline-block;"
                                     scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
