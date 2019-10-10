@@ -1,8 +1,8 @@
-@extends('layouts.main') 
+@extends('layouts.main')
 @section('title')
 <title>{{ $story->title }} | DTU Times </title>
 @endsection
- 
+
 @section('content')
 <section id="page-title">
 
@@ -103,14 +103,16 @@
             <div class="sidebar nobottommargin col_last clearfix">
                 <div class="sidebar-widgets-wrap">
 
+                  <!--
                     <div class="widget clearfix">
 
                         <h4>Instagram Photostream</h4>
 
-                        <!-- InstaWidget -->
+                        <-InstaWidget->
                         <a href="https://instawidget.net/v/user/dtu_times" id="link-73734ef5caafb9b7a4fbcd2ce68135d5d39b14869251ce0ffed917dd24dba4af">dtu_times</a>
                         <script src="https://instawidget.net/js/instawidget.js?u=73734ef5caafb9b7a4fbcd2ce68135d5d39b14869251ce0ffed917dd24dba4af&width=300px"></script>
                     </div>
+                  -->
 
 
 
@@ -174,5 +176,5 @@
 @endsection
 
 @section('scripts')
-    
+
 @endsection
