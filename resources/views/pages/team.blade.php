@@ -1561,7 +1561,7 @@
 								<div class="team-desc">
 									<div class="team-title">
 										<h5>Manish <br> Sahani</h5>
-										<h6>Coordinator</h6>
+										<h6>Associate Developer</h6>
 									</div>
 									<a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/manish.s1999" class="social-icon inline-block si-small si-light si-rounded si-facebook">
 										<i class="icon-facebook"></i>
@@ -1585,7 +1585,7 @@
 								<div class="team-desc">
 									<div class="team-title">
 										<h5>Nandana <br> Tiwari</h5>
-										<h6>Coordinator</h6>
+										<h6>Associate Developer</h6>
 									</div>
 									<a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/nandana219" class="social-icon inline-block si-small si-light si-rounded si-facebook">
 										<i class="icon-facebook"></i>
@@ -1610,7 +1610,7 @@
 								<div class="team-desc">
 									<div class="team-title">
 										<h5>Sambhav <br> Jain</h5>
-										<h6>Coordinator</h6>
+										<h6>Associate Developer</h6>
 									</div>
 									<a target="_blank" rel="noopener noreferrer" href="https://m.facebook.com/sambhav.jain.1610092" class="social-icon inline-block si-small si-light si-rounded si-facebook">
 										<i class="icon-facebook"></i>
