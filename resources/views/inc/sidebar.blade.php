@@ -1,5 +1,5 @@
 <div class="nav-container nav-container--sidebar">
-    <div class="nav-sidebar-column" style="background-color: #3A015C; color:white !important;">
+    <div class="nav-sidebar-column" style="color:white !important;" data-gradient-bg="#880D1E,#DD2D4A,#F26A8D,#F49CBB,#CBEEF3">
         <div class="text-center text-block">
             <a href="{{ route('welcome') }}">
                 <img alt="avatar" src="{{ asset('img/logo-light.png') }}" class="image--md" />
