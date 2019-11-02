@@ -3,13 +3,13 @@
 
 @section('content')
 @if (!auth()->user()->hasRole('society_head'))
-<section class="cover cover-fullscreen height-100 imagebg" data-gradient-bg="#3590F3,#62BFED,#8FB8ED,#C2BBF0,#F1E3F3">
+<section class="cover height-50 imagebg" data-gradient-bg="#3590F3,#62BFED,#8FB8ED,#C2BBF0,#F1E3F3">
 
     <div class="container pos-vertical-center">
         <div class="row justify-content-center" >
             <div class="col-md-4 col-lg-4 text-center" >
 
-              <h1 style="font-family: 'Rajdhani', sans-serif; color:white;"> डैशबोर्ड </h1>
+              <h1 style="font-family: 'Rajdhani', sans-serif; color:white; font-size:15rem;"> डैशबोर्ड </h1>
             </div>
         </div>
      </div>
