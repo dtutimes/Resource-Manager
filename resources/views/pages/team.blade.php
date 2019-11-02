@@ -1552,7 +1552,6 @@
 
 					</div>
 
-					<div class="row">
 						<div class="col-md-2 col-xs-6 bottommargin">
 							<div class="team">
 								<div class="team-image">
@@ -1733,7 +1732,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
 
 					</div>
 

@@ -47,7 +47,7 @@
         <div class="text-block">
             <h4 class="mb-0">
                 <!-- <a href="{{ route('me.show') }}">{{ auth()->user()->name }}</a> -->
-                <span data-tooltip="View or Edit your details."><a href="{{ route('me.show') }}">{{ auth()->user()->name }}</a></span>
+                <span data-tooltip="View or Edit your details."><a class="text-dark" href="{{ route('me.show') }}">{{ auth()->user()->name }}</a></span>
             </h4>
             <small>
                 <a href="{{ route('logout') }}" onclick="event.preventDefault();
@@ -63,7 +63,7 @@
         <div class="text-block">
             <ul class="menu-vertical">
                 <li>
-                    <a href="{{ route('dashboard') }}">
+                    <a class="text-dark" href="{{ route('dashboard') }}">
                         Dashboard
                     </a>
                 </li>
