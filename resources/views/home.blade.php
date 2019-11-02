@@ -1,9 +1,9 @@
-@extends('layouts.app') 
+@extends('layouts.app')
 
 
 @section('content')
 @if (!auth()->user()->hasRole('society_head'))
-<section class="pt-5 pb-5 border--bottom">
+<section class="pt-5 pb-5 border--bottom" style="background-color:#4F0147; color:white !important;">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 col-lg-10">
@@ -20,7 +20,7 @@
 @endif
 
 @if (!auth()->user()->hasRole('photographer') && !auth()->user()->hasRole('society_head'))
-    <section>
+    <section style="background-color:#3A015C; color:white !important;">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-4 mb-3">
@@ -55,12 +55,12 @@
                             <div class="process__body">
                                 <h4 class="m-0">
                                     {{ $item->name }}
-                                </h4> 
+                                </h4>
                                 <p class="m-0">
                                     {{ $item->description }}
                                 </p>
                                 <p>
-                                    <small>Created by {{ \App\User::find($item->user_id) ? \App\User::find($item->user_id)->name : 'Not found' }},</small>                                
+                                    <small>Created by {{ \App\User::find($item->user_id) ? \App\User::find($item->user_id)->name : 'Not found' }},</small>
                                     @if ($item->completed_by)
                                         <small>
                                             Completed by {{ \App\User::find($item->completed_by) ? \App\User::find($item->completed_by)->name : 'The User has been deleted or Not found' }}, {{ \Carbon\Carbon::parse($item->completed_at)->diffForHumans() }}
@@ -110,9 +110,9 @@
                                 @elseif (auth()->user()->hasRole('photographer'))
                                     <input type="hidden" name="for" value="photographer">
                                 @endif
-                                
+
                             </div>
-                        
+
                             <div class="col-md-6">
                                 <textarea name="description" id="" cols="30" rows="3" placeholder="Description"></textarea>
                             </div>

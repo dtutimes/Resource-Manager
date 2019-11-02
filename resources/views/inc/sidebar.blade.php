@@ -13,22 +13,22 @@
                 </div>
                 <ul class="social-list list-inline list--hover ml-auto mt-3 mb-1 mr-auto">
                     <li>
-                        <a href="mailto:dtutimes@dtu.ac.in">
+                        <a class="text-white" href="mailto:dtutimes@dtu.ac.in">
                             <i class="socicon socicon-mail icon icon--xs"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/dtutimes">
+                        <a class="text-white" href="https://twitter.com/dtutimes">
                             <i class="socicon socicon-twitter icon icon--xs"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.facebook.com/dtutimes/">
+                        <a class="text-white" href="https://www.facebook.com/dtutimes/">
                             <i class="socicon socicon-facebook icon icon--xs"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/dtu_times/?hl=en">
+                        <a class="text-white" href="https://www.instagram.com/dtu_times/?hl=en">
                             <i class="socicon socicon-instagram icon icon--xs"></i>
                         </a>
                     </li>
@@ -37,7 +37,7 @@
                     <span class="type--fade">
                         <small>
                             Got any issues? Contact the
-                            <a href="{{ route('dev.index') }}" class="text-primary"> Developers.</a>
+                            <a href="{{ route('dev.index') }}" style="color: #2BAC76;"> Developers.</a>
                         </small>
                     </span>
                 </div>
