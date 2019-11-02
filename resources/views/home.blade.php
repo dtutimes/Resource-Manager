@@ -3,7 +3,7 @@
 
 @section('content')
 @if (!auth()->user()->hasRole('society_head'))
-<section class="cover height-100 imagebg" data-gradient-bg="#3590F3,#62BFED,#8FB8ED,#C2BBF0,#FF6A8F">
+<section class="cover height-100 imagebg" data-gradient-bg="#3590F3,#62BFED,#8FB8ED,#C2BBF0,#C9B8DF">
 
     <div class="container pos-vertical-center">
         <div class="row justify-content-center" >
