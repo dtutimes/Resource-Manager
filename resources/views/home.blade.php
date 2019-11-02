@@ -3,7 +3,7 @@
 
 @section('content')
 @if (!auth()->user()->hasRole('society_head'))
-<section class="pt-5 pb-5 border--bottom" style="background-color:#4F0147; color:white !important;">
+<section class="pt-5 pb-5 border--bottom" style="background-color:#9381FF; color:white !important;">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 col-lg-10">
@@ -20,7 +20,7 @@
 @endif
 
 @if (!auth()->user()->hasRole('photographer') && !auth()->user()->hasRole('society_head'))
-    <section style="background-color:#3A015C; color:white !important;">
+    <section style="background-color:#B8B8FF; color:white !important;">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-4 mb-3">
