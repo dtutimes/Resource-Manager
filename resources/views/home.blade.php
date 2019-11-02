@@ -3,24 +3,21 @@
 
 @section('content')
 @if (!auth()->user()->hasRole('society_head'))
-<section class="pt-5 pb-5 border--bottom" style="color:white !important;">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12 col-lg-10">
-                <h1>Dashboard</h1>
-                <p>
-                    Welcome to the backdoor for the DTU Times website.
-                </p>
+<section class="cover cover-fullscreen height-100 imagebg" data-gradient-bg="#3590F3,#62BFED,#8FB8ED,#C2BBF0,#F1E3F3">
+
+    <div class="container pos-vertical-center">
+        <div class="row justify-content-center" >
+            <div class="col-md-4 col-lg-4 text-center" >
+
+              <h1 style="font-family: 'Rajdhani', sans-serif; color:white;"> डैशबोर्ड </h1>
             </div>
         </div>
-        <!--end of row-->
-    </div>
-    <!--end of container-->
+     </div>
 </section>
 @endif
 
 @if (!auth()->user()->hasRole('photographer') && !auth()->user()->hasRole('society_head'))
-    <section style="color:white !important;">
+    <section style="">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-4 mb-3">
