@@ -1,5 +1,5 @@
 <div class="nav-container nav-container--sidebar">
-    <div class="nav-sidebar-column">
+    <div class="nav-sidebar-column" style="background-color: #35012C;">
         <div class="text-center text-block">
             <a href="{{ route('welcome') }}">
                 <img alt="avatar" src="{{ asset('img/DTU%20Time1s.png') }}" class="image--md" />
@@ -473,7 +473,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="{{ route('subscribers.index')}}">Subscribers</a>
+                    <a class="text-dark" href="{{ route('subscribers.index')}}">Subscribers</a>
                 </li>
                 @endif
 
