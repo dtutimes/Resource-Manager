@@ -37,7 +37,7 @@
                     <span class="type--fade">
                         <small>
                             Got any issues? Contact the
-                            <a href="{{ route('dev.index') }}" style="color: #E8DBC5;"> Developers.</a>
+                            <a href="{{ route('dev.index') }}" style="color: #F6F7F8;"> Developers.</a>
                         </small>
                     </span>
                 </div>
@@ -51,7 +51,7 @@
             </h4>
             <small>
                 <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                    document.getElementById('logout-form').submit();" style="color: #E8DBC5;">
+                    document.getElementById('logout-form').submit();" style="color: #F6F7F8;">
                     Logout
                 </a>
 
