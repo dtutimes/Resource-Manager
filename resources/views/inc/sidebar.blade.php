@@ -37,7 +37,7 @@
                     <span class="type--fade">
                         <small>
                             Got any issues? Contact the
-                            <a href="{{ route('dev.index') }}" style="color: #2BAC76;"> Developers.</a>
+                            <a href="{{ route('dev.index') }}" style="color: #E8DBC5;"> Developers.</a>
                         </small>
                     </span>
                 </div>
@@ -51,7 +51,7 @@
             </h4>
             <small>
                 <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                    document.getElementById('logout-form').submit();">
+                    document.getElementById('logout-form').submit();" style="color: #E8DBC5;">
                     Logout
                 </a>
 
@@ -156,24 +156,24 @@
                         <div class="dropdown__content">
                             <ul class="menu-vertical">
                                 <li>
-                                    <a href="{{ route('stories.create') }}">
+                                    <a href="{{ route('stories.create') }}" class="text-white">
                                             New Story
                                         </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('stories.index')}}">
+                                    <a href="{{ route('stories.index')}}" class="text-white">
                                             Your Stories
                                         </a>
                                 </li>
 
                                 {{-- Publish Story --}} @if (auth()->user()->can('publish-story'))
                                 <li>
-                                    <a href="{{ route('council.stories.index')}}">
+                                    <a href="{{ route('council.stories.index')}}" class="text-white">
                                             Pending Stories
                                         </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('council.stories.published')}}">
+                                    <a href="{{ route('council.stories.published')}}" class="text-white">
                                             Published Stories
                                         </a>
                                 </li>
@@ -191,13 +191,13 @@
                         <div class="dropdown__content">
                             <ul class="menu-vertical">
                                 <li>
-                                    <a href="{{ route('categories.index') }}">
+                                    <a href="{{ route('categories.index') }}" class="text-white">
                                             All Categories
                                         </a>
                                 </li>
                                 @if (auth()->user()->can('create-category'))
                                 <li>
-                                    <a href="{{ route('categories.create') }}">
+                                    <a href="{{ route('categories.create') }}" class="text-white">
                                             New Category
                                         </a>
                                 </li>
@@ -215,7 +215,7 @@
                         <div class="dropdown__content">
                             <ul class="menu-vertical">
                                 <li>
-                                    <a href="{{ route('stories.leaderboard') }}">
+                                    <a href="{{ route('stories.leaderboard') }}" class="text-white">
                                         Columnists
                                     </a>
                                 </li>
@@ -242,21 +242,21 @@
                         <div class="dropdown__content">
                             <ul class="menu-vertical">
                                 <li>
-                                    <a href="{{ route('albums.index')}}">
+                                    <a href="{{ route('albums.index')}}" class="text-white">
                                             All Albums
                                         </a>
                                 </li>
 
                                 @if (auth()->user()->can('create-album'))
                                 <li>
-                                    <a href="{{ route('albums.create') }}">
+                                    <a href="{{ route('albums.create') }}" class="text-white">
                                             New Album
                                         </a>
                                 </li>
                                 @endif
 
                                 <li>
-                                    <a href="{{ route('images.me')}}">
+                                    <a href="{{ route('images.me')}}" class="text-white">
                                         All Images
                                     </a>
                                 </li>
@@ -281,22 +281,22 @@
                         <div class="dropdown__content">
                             <ul class="menu-vertical">
                                 <li>
-                                    <a href="{{ route('users.index') }}">
+                                    <a href="{{ route('users.index') }}" class="text-white">
                                         All Members
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('users.create') }}">
+                                    <a href="{{ route('users.create') }}" class="text-white">
                                         New Member
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('users.blocked') }}">
+                                    <a href="{{ route('users.blocked') }}" class="text-white">
                                         Blocked Members
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('users.unactive') }}">
+                                    <a href="{{ route('users.unactive') }}" class="text-white">
                                         Unactive Members
                                     </a>
                                 </li>
@@ -313,12 +313,12 @@
                         <div class="dropdown__content">
                             <ul class="menu-vertical">
                                 <li>
-                                    <a href="{{ route('roles.index') }}">
+                                    <a href="{{ route('roles.index') }}" class="text-white">
                                         All Roles
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('roles.create') }}">
+                                    <a href="{{ route('roles.create') }}" class="text-white">
                                         New Role
                                     </a>
                                 </li>
@@ -335,7 +335,7 @@
                         <div class="dropdown__content">
                             <ul class="menu-vertical">
                                 <li>
-                                    <a href="{{ route('permissions.index') }}">
+                                    <a href="{{ route('permissions.index') }}" class="text-white">
                                         All Permissions
                                     </a>
                                 <!-- </li>
@@ -367,12 +367,12 @@
                         <div class="dropdown__content">
                             <ul class="menu-vertical">
                                 <li>
-                                    <a href="{{ route('council.societies.index')}}">
+                                    <a href="{{ route('council.societies.index')}}" class="text-white">
                                         All Societies
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('council.societies.pending') }}">
+                                    <a href="{{ route('council.societies.pending') }}" class="text-white">
                                         Pending
                                     </a>
                                 </li>
@@ -389,17 +389,17 @@
                         <div class="dropdown__content">
                             <ul class="menu-vertical">
                                 <li>
-                                    <a href="{{ route('council.societies.news.index')}}">
+                                    <a href="{{ route('council.societies.news.index')}}" class="text-white">
                                         All News
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('council.societies.news.pending')}}">
+                                    <a href="{{ route('council.societies.news.pending')}}" class="text-white">
                                         Pending News
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('council.societies.news.published')}}">
+                                    <a href="{{ route('council.societies.news.published')}}" class="text-white">
                                         Published News
                                     </a>
                                 </li>
@@ -416,7 +416,7 @@
                         <div class="dropdown__content">
                             <ul class="menu-vertical">
                                 <li>
-                                    <a href="{{ route('ga.index') }}">
+                                    <a href="{{ route('ga.index') }}" class="text-white">
                                         Dashboard
                                     </a>
                                 </li>
@@ -433,17 +433,17 @@
                         <div class="dropdown__content">
                             <ul class="menu-vertical">
                                 <li>
-                                    <a href="{{ route('superuser.dashboard') }}">
+                                    <a href="{{ route('superuser.dashboard') }}" class="text-white">
                                         Stats
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('stats.stories')}}">
+                                    <a href="{{ route('stats.stories')}}" class="text-white">
                                         Story
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('stats.albums') }}">
+                                    <a href="{{ route('stats.albums') }}" class="text-white">
                                         Album
                                     </a>
                                 </li>
@@ -459,12 +459,12 @@
                         <div class="dropdown__content">
                             <ul class="menu-vertical">
                                 <li>
-                                    <a href="{{ route('campaigns.index')}}">
+                                    <a href="{{ route('campaigns.index')}}" class="text-white">
                                             All Campaign
                                         </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('campaigns.create') }}">
+                                    <a href="{{ route('campaigns.create') }}" class="text-white">
                                             New Campaign
                                         </a>
                                 </li>
