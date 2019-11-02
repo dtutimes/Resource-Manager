@@ -32,7 +32,7 @@
                         <span class="btn__text">Delete User</span>
                     </a>
 
-                    <a href="{{ route('users.position') }}" class="btn btn--sm" >
+                    <a href="{{ route('users.position', $user->uuid) }}" class="btn btn--sm" >
                         <span class="btn__text">Update Position</span>
                     </a>
 
