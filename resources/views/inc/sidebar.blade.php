@@ -1,8 +1,8 @@
 <div class="nav-container nav-container--sidebar">
-    <div class="nav-sidebar-column bg--dark">
+    <div class="nav-sidebar-column">
         <div class="text-center text-block">
             <a href="{{ route('welcome') }}">
-                <img alt="avatar" src="{{ asset('img/logo-light.png') }}" class="image--md" />
+                <img alt="avatar" src="{{ asset('img/DTU%20Time1s.png') }}" class="image--md" />
             </a>
             <div class="text-center space--xs mt-1">
                 <div>
@@ -43,7 +43,7 @@
                 </div>
             </div>
         </div>
-                
+
         <div class="text-block">
             <h4 class="mb-0">
                 <!-- <a href="{{ route('me.show') }}">{{ auth()->user()->name }}</a> -->
@@ -54,7 +54,7 @@
                     document.getElementById('logout-form').submit();">
                     Logout
                 </a>
-                
+
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form>
@@ -69,7 +69,7 @@
                 </li>
 
 
-                <!-- 
+                <!--
                 |
                 |
                 | Society Head Section
@@ -83,7 +83,7 @@
                         @endphp
                         <li>
                             <a href="{{ route('society.head.show', $society->slug) }}">
-                                About {{ str_limit($society->name, $limit = 17, $end = '...') }} 
+                                About {{ str_limit($society->name, $limit = 17, $end = '...') }}
                             </a>
                         </li>
 
@@ -129,8 +129,8 @@
                                     </ul>
                                 </div>
                             </div>
-                        </li>                        
-                    @else 
+                        </li>
+                    @else
                         <li>
                             <a href="{{ route('society.head.create')}}">
                                 Create Your Society
@@ -139,14 +139,14 @@
                     @endif
                 @endif
 
-                <!-- 
+                <!--
                 |
                 |
                 | Columnist Section
                 |
                 |
                  -->
-                {{-- Stories option --}} 
+                {{-- Stories option --}}
                 @if (!auth()->user()->hasRole('photographer') && !auth()->user()->hasRole('society_head'))
                 <li class="dropdown">
                     <span class="dropdown__trigger">
@@ -224,9 +224,9 @@
                     </div>
                 </li>
 
-                
 
-                <!-- 
+
+                <!--
                 |
                 |
                 | Photographers Section
@@ -265,7 +265,7 @@
                     </div>
                 </li>
 
-                <!-- 
+                <!--
                 |
                 |
                 | Superuser Section
@@ -349,9 +349,9 @@
                     </div>
                 </li>
 
-                
 
-                <!-- 
+
+                <!--
                 |
                 |
                 | Council Section
@@ -373,7 +373,7 @@
                                 </li>
                                 <li>
                                     <a href="{{ route('council.societies.pending') }}">
-                                        Pending 
+                                        Pending
                                     </a>
                                 </li>
                             </ul>
@@ -427,7 +427,7 @@
 
                 <li class="dropdown">
                     <span>
-                        Insights    
+                        Insights
                     </span>
                     <div class="dropdown__container">
                         <div class="dropdown__content">

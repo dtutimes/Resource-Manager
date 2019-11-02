@@ -1667,30 +1667,6 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-2 col-xs-6 bottommargin">
-							<div class="team">
-								<div class="team-image">
-									<img src="/img/team/WebDevelopers/Kushal.jpg" alt="Kushal">
-								</div>
-								<div class="team-desc">
-									<div class="team-title">
-										<h5>Kushal <br> Gera</h5>
-									</div>
-									<a target="_blank" rel="noopener noreferrer" href="https://www.example.com/example" class="social-icon inline-block si-small si-light si-rounded si-facebook">
-										<i class="icon-facebook"></i>
-										<i class="icon-facebook"></i>
-									</a>
-									<a target="_blank" rel="noopener noreferrer" href="https://www.example.com/example" class="social-icon inline-block si-small si-light si-rounded si-linkedin">
-										<i class="icon-linkedin"></i>
-										<i class="icon-linkedin"></i>
-									</a>
-
-
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
 					<div class="col-md-2 col-xs-6 bottommargin">
 							<div class="team">
 								<div class="team-image">
@@ -1757,6 +1733,7 @@
 								</div>
 							</div>
 						</div>
+					</div>
 
 					</div>
 
