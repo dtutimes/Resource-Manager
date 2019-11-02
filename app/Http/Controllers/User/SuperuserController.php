@@ -94,7 +94,7 @@ class SuperuserController extends Controller
         $user = User::whereUuid($uuid)->firstOrFail();
 
         $user->update(['blocked' => 0]);
-        
+
         session()->flash('success', 'User unblocked!');
 
         return redirect()->back();
@@ -105,7 +105,7 @@ class SuperuserController extends Controller
         $user = User::whereUuid($uuid)->firstOrFail();
 
         $user->update(['blocked' => 1]);
-        
+
         session()->flash('success', 'User blocked!');
 
         return redirect()->back();
@@ -113,7 +113,7 @@ class SuperuserController extends Controller
 
 
 
-    
+
     /*
     |==================================
     |
@@ -135,7 +135,7 @@ class SuperuserController extends Controller
 
     /**
      * Store a newly created resource in DB
-     * 
+     *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
@@ -153,7 +153,7 @@ class SuperuserController extends Controller
 
         $user = User::create($data);
 
-        if($user) $user->attachRole($role); 
+        if($user) $user->attachRole($role);
 
         event( new UserHasRegistered($user, $password));
 
@@ -171,10 +171,10 @@ class SuperuserController extends Controller
     public function showUser($uuid)
     {
         $user = User::whereUuid($uuid)->with([
-                    'roles', 
+                    'roles',
                     'permissions'
                 ])->firstOrFail();
-        
+
         return view('users.show', ['user' => $user]);
     }
 
@@ -203,7 +203,7 @@ class SuperuserController extends Controller
     public function editPermissionUser($uuid)
     {
         $user = User::whereUuid($uuid)->firstOrFail();
-        
+
         $userPermissions = $user->allPermissions();
 
         $allPermissions = Permission::all();
@@ -215,7 +215,7 @@ class SuperuserController extends Controller
         ]);
     }
 
-   
+
     public function updatePermissionUser(Request $request, $uuid)
     {
 
@@ -229,7 +229,7 @@ class SuperuserController extends Controller
 
     }
 
-    
+
     /*
     |==================================
     |
@@ -241,7 +241,7 @@ class SuperuserController extends Controller
     public function editRoleUser($uuid)
     {
         $user = User::whereUuid($uuid)->with('roles')->firstOrFail();
-        
+
         $allRole = Role::all();
 
         return view('users.role', [
@@ -266,6 +266,33 @@ class SuperuserController extends Controller
         $user->syncRoles([$role->id]);
 
         return redirect()->route('users.show', $user->uuid);
+    }
+
+    /*
+    |==================================
+    |
+    |   Users Position System
+    |
+    |==================================
+    */
+
+    public function updatePosition($uuid)
+    {
+        $user = User::whereUuid($uuid)->firstOrFail();
+
+        return view('users.position', [
+            'user' => $user,
+        ]);
+
+    }
+
+    public function storePosition(Request $request, $uuid)
+    {
+      $user = User::whereUuid($uuid)->firstOrFail();
+
+      $user->update(['position' => $request->position]);
+
+      return redirect()->route('users.show', $user->uuid);
     }
 
 }

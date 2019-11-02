@@ -53,10 +53,10 @@ Route::get('/tracking/societies/referrals/{slug}', 'TrackingController@trackRefe
 
 // Superuser Routes
 Route::group(['prefix' => 'manage', 'middleware' => ['role:superuser', 'CheckBlockedUser', 'checkActivatedUser']], function() {
-    
-    // Dashboard 
+
+    // Dashboard
     Route::get('/', 'User\SuperuserController@index')->name('superuser.dashboard');
-    
+
     // Roles
     Route::group(['prefix' => 'roles'], function () {
         Route::get('/', 'RoleController@index')->name('roles.index');
@@ -72,7 +72,7 @@ Route::group(['prefix' => 'manage', 'middleware' => ['role:superuser', 'CheckBlo
         Route::get('/', 'User\SuperuserController@indexUser')->name('users.index');
 
         // Unactive Users system
-        Route::get('/unactive', 'User\SuperuserController@unactiveUsers')->name('users.unactive');        
+        Route::get('/unactive', 'User\SuperuserController@unactiveUsers')->name('users.unactive');
         Route::post('/unactive/export', 'User\SuperuserController@exportUnactiveUsers')->name('users.unactive.export');
         Route::post('/unactive/remind', 'User\SuperuserController@sendReminderToUnactiveUsers')->name('users.unactive.reminder');
 
@@ -85,18 +85,21 @@ Route::group(['prefix' => 'manage', 'middleware' => ['role:superuser', 'CheckBlo
         // Users CRUD
         Route::get('/create', 'User\SuperuserController@createUser')->name('users.create');
         Route::post('/', 'User\SuperuserController@storeUser')->name('users.store');
-        Route::get('/{uuid}', 'User\SuperuserController@showUser')->name('users.show'); 
+        Route::get('/{uuid}', 'User\SuperuserController@showUser')->name('users.show');
+        Route::get('/{uuid}/position', 'User\SuperuserController@updatePosition')->name('users.position');
+        Route::post('/{uuid}/positions', 'User\SuperuserController@storePosition')->name('users.position.update');
+
         Route::get('/{uuid}/permissions', 'User\SuperuserController@editPermissionUser')->name('users.permission.edit');
         Route::post('/{uuid}/permissions', 'User\SuperuserController@updatePermissionUser')->name('users.permission.update');
         Route::get('/{uuid}/role', 'User\SuperuserController@editRoleUser')->name('users.role.edit');
         Route::post('/{uuid}/role', 'User\SuperuserController@updateRoleUser')->name('users.role.update');
         Route::delete('/{uuid}', 'User\SuperuserController@destroyUser')->name('users.destroy');
-    });    
+    });
 });
 
 // Council Routes
 Route::group(['prefix' => 'council', 'middleware' => ['role:council|superuser|coordinator','CheckBlockedUser', 'checkActivatedUser']], function() {
-    
+
     // Dashboard currently using superusers
     Route::get('/', 'User\SuperuserController@index')->name('council.dashboard');
 
@@ -134,7 +137,7 @@ Route::group(['prefix' => 'council', 'middleware' => ['role:council|superuser|co
             Route::get('/{uuid}/edit', 'User\CouncilController@edit')->name('council.stories.edit');
             Route::put('/{uuid}', 'User\CouncilController@update')->name('council.stories.update');
             Route::get('/{uuid}/publish', 'User\CouncilController@publish')->name('council.stories.publish');
-        });      
+        });
     });
 
     // Socs routes beyond crud
@@ -142,7 +145,7 @@ Route::group(['prefix' => 'council', 'middleware' => ['role:council|superuser|co
         Route::get('/', 'User\CouncilController@societyIndex')->name('council.societies.index');
         Route::get('/pending', 'User\CouncilController@societiesInPending')->name('council.societies.pending');
 
-        Route::group(['prefix' => 'news'], function () { 
+        Route::group(['prefix' => 'news'], function () {
             Route::get('/', 'User\CouncilController@societyNewsIndex')->name('council.societies.news.index');
             Route::get('/pending', 'User\CouncilController@societyNewsInPending')->name('council.societies.news.pending');
             Route::get('/published', 'User\CouncilController@societyNewsPublished')->name('council.societies.news.published');
@@ -153,7 +156,7 @@ Route::group(['prefix' => 'council', 'middleware' => ['role:council|superuser|co
             Route::delete('/{uuid}', 'User\CouncilController@deleteSocietyNews')->name('council.societies.news.destroy');
         });
 
-        Route::group(['prefix' => '{slug}'], function () { 
+        Route::group(['prefix' => '{slug}'], function () {
             Route::get('/', 'User\CouncilController@societyShow')->name('council.societies.show');
             Route::get('/images' , 'User\CouncilController@societyImageIndex')->name('council.societies.show.images');
             Route::get('/draft', 'User\CouncilController@updateStatusToDraft')->name('society.head.status.draft');
@@ -162,7 +165,7 @@ Route::group(['prefix' => 'council', 'middleware' => ['role:council|superuser|co
 
         Route::delete('/{id}', 'User\CouncilController@societyDelete')->name('council.societies.destroy');
 
-      
+
     });
 
     // Stats
@@ -224,15 +227,15 @@ Route::middleware(['auth', 'CheckBlockedUser', 'checkActivatedUser'])->group(fun
         Route::middleware('permission:read-category')->group(function () {
             Route::get('/', 'CategoryController@index')->name('categories.index');
             Route::get('/{slug}', 'CategoryController@show')->name('categories.show');
-        }); 
+        });
         Route::middleware('permission:edit-category')->group(function () {
             Route::get('/{slug}/edit', 'CategoryController@edit')->name('categories.edit');
             Route::put('/{slug}', 'CategoryController@update')->name('categories.update');
         });
         Route::delete('/{slug}', 'CategoryController@destroy')->name('categories.destroy')->middleware('permission:delete-category');
-    }); 
-    
-    // Analytics 
+    });
+
+    // Analytics
     Route::get('/analytics', 'AnalyticsController@index')->name('ga.index');
 
     // Stories Routes
@@ -261,7 +264,7 @@ Route::middleware(['auth', 'CheckBlockedUser', 'checkActivatedUser'])->group(fun
         Route::delete('/{uuid}', 'AlbumController@destroy')->name('albums.destroy');
         Route::get('/{uuid}/publish', 'AlbumController@publish')->name('albums.publish')->middleware('permission:publish-album');
         Route::get('/{uuid}/draft', 'AlbumController@draft')->name('albums.draft')->middleware('permission:publish-album');
-        
+
         // Images Routes
         Route::group(['prefix' => '{uuid}/images', 'middleware' => 'CheckAlbum'], function() {
             Route::get('/', 'ImageController@index')->name('images.index');
@@ -278,7 +281,7 @@ Route::middleware(['auth', 'CheckBlockedUser', 'checkActivatedUser'])->group(fun
     });
 
     Route::get('/uploads', 'ImageController@me')->name('images.me')->middleware('role:superuser|council|columnist|photographer|coordinator');// User images
-    
+
     // Society Routes
     Route::group(['prefix' => 'society-info', 'middleware' => ['role:superuser|council|society_head']], function() {
         Route::get('/', 'User\SocietyHeadController@index')->name('society.head.index');
@@ -302,9 +305,8 @@ Route::middleware(['auth', 'CheckBlockedUser', 'checkActivatedUser'])->group(fun
             Route::get('/create', 'SocietyNewsController@create')->name('society.head.news.create');
             Route::post('/', 'SocietyNewsController@store')->name('society.head.news.store');
             Route::get('/{uuid}/submit', 'SocietyNewsController@submitForApproval')->name('society.head.news.approval');
-        });  
+        });
     });
 
-    
-});
 
+});

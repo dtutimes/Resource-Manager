@@ -1,4 +1,4 @@
-@extends('layouts.app') 
+@extends('layouts.app')
 @section('content')
 <section class="bg--secondary space--sm">
     <div class="container">
@@ -27,15 +27,19 @@
                     </ul>
                 </div>
                 <div class="boxed bg--none text-center">
-                    <a href="{{ route('users.index') }}" class="btn btn--sm" onclick="event.preventDefault(); 
+                    <a href="{{ route('users.index') }}" class="btn btn--sm" onclick="event.preventDefault();
                                                 document.getElementById('delete-form').submit();">
                         <span class="btn__text">Delete User</span>
                     </a>
 
-                    
+                    <a href="{{ route('users.position') }}" class="btn btn--sm" >
+                        <span class="btn__text">Update Position</span>
+                    </a>
+
+
 
                     @if($user->blocked)
-                        <a href="" class="btn btn--sm" onclick="event.preventDefault(); 
+                        <a href="" class="btn btn--sm" onclick="event.preventDefault();
                                                     document.getElementById('unblock-form').submit();">
                             <span class="btn__text">Unblock</span>
                         </a>
@@ -44,7 +48,7 @@
                             @csrf @method('PUT')
                         </form>
                     @else
-                        <a href="" class="btn btn--sm" onclick="event.preventDefault(); 
+                        <a href="" class="btn btn--sm" onclick="event.preventDefault();
                                                     document.getElementById('block-form').submit();">
                             <span class="btn__text">Block</span>
                         </a>
@@ -102,7 +106,7 @@
                         </li>
                     </ul>
                 </div>
-                
+
                 <div class="boxed boxes--border">
                     <h4>Permissions</h4>
                     <span class="label">
@@ -114,17 +118,17 @@
                         @foreach ($user->allPermissions() as $item) <li class="">{{$item->name}}</li> @endforeach
                     </ul>
                 </div>
-                
+
 
             </div>
         </div>
         <!--end of row-->
     </div>
     <!--end of container-->
-</section> 
-    {{-- <p>name: {{$user->name}} </p>    
-    <p>email: {{$user->email}} </p>    
-    <p>username: {{$user->username}} </p>    
+</section>
+    {{-- <p>name: {{$user->name}} </p>
+    <p>email: {{$user->email}} </p>
+    <p>username: {{$user->username}} </p>
     <p>bio: {{$user->bio}} </p>
     <p>avatar: {{$user->avatar}} </p>
     <p>activated: {{$user->activated}} </p>
@@ -134,10 +138,10 @@
     <p>instagram: {{$user->instagram}} </p>
     <p>display_mail: {{$user->display_mail}} </p>
     <p>medium: {{$user->medium}} </p>
-    <p>Role: 
-           
+    <p>Role:
+
     </p>
-    <p>Permissions: 
-        
+    <p>Permissions:
+
     </p> --}}
 @endsection
