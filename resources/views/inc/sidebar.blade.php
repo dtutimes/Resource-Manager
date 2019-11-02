@@ -1,8 +1,8 @@
 <div class="nav-container nav-container--sidebar">
-    <div class="nav-sidebar-column" style="background-color: #35012C;">
+    <div class="nav-sidebar-column" style="background-color: #35012C; color:white !important;">
         <div class="text-center text-block">
             <a href="{{ route('welcome') }}">
-                <img alt="avatar" src="{{ asset('img/DTU%20Time1s.png') }}" class="image--md" />
+                <img alt="avatar" src="{{ asset('img/logo-light.png') }}" class="image--md" />
             </a>
             <div class="text-center space--xs mt-1">
                 <div>
@@ -47,7 +47,7 @@
         <div class="text-block">
             <h4 class="mb-0">
                 <!-- <a href="{{ route('me.show') }}">{{ auth()->user()->name }}</a> -->
-                <span data-tooltip="View or Edit your details."><a class="text-dark" href="{{ route('me.show') }}">{{ auth()->user()->name }}</a></span>
+                <span data-tooltip="View or Edit your details."><a class="text-white" href="{{ route('me.show') }}">{{ auth()->user()->name }}</a></span>
             </h4>
             <small>
                 <a href="{{ route('logout') }}" onclick="event.preventDefault();
@@ -63,7 +63,7 @@
         <div class="text-block">
             <ul class="menu-vertical">
                 <li>
-                    <a class="text-dark" href="{{ route('dashboard') }}">
+                    <a class="text-white" href="{{ route('dashboard') }}">
                         Dashboard
                     </a>
                 </li>
@@ -473,7 +473,7 @@
                     </div>
                 </li>
                 <li>
-                    <a class="text-dark" href="{{ route('subscribers.index')}}">Subscribers</a>
+                    <a class="text-white" href="{{ route('subscribers.index')}}">Subscribers</a>
                 </li>
                 @endif
 
