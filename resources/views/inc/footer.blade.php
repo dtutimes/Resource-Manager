@@ -84,7 +84,9 @@
 
             <div class="container" style="margin-top:30px">
                 <small class="copyright col-md-12 col-sm-12 col-xs-12" style="color:white; text-align:center;">Copyright &copy; 2019 DTU Times</small>
-                <small class="copyright col-md-12 col-sm-12 col-xs-12" style="color:gray; text-align:center;">Privacy Policy</small>
+                <small class="copyright col-md-12 col-sm-12 col-xs-12" style="color:gray; text-align:center;">
+                  <a href="http://dtutimes.live/pdf/privacypolicy.pdf"> Privacy Policy </a>
+                </small>
             </div>
             <!--//container-->
         </div>
