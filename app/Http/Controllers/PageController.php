@@ -58,6 +58,6 @@ class PageController extends Controller
 
     public function privacypolicy ()
     {
-        return asset('/pdf/privacypolicy.pdf');
+        return redirect('http://dtutimes.live/pdf/privacypolicy.pdf');
     }
 }
