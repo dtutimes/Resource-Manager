@@ -17,6 +17,7 @@ Route::get('/contact', 'PageController@contact')->name('contact');
 Route::get('/team', 'PageController@team')->name('team');
 Route::get('/editions', 'PageController@editions')->name('editions');
 Route::get('/test', 'PageController@test');
+Route::get('/privacypolicy', 'PageController@privacypolicy');
 
 
 // Join the newsletter

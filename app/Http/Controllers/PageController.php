@@ -14,7 +14,7 @@ class PageController extends Controller
     }
 
     /**
-     * 
+     *
      */
     public function welcome()
     {
@@ -22,7 +22,7 @@ class PageController extends Controller
     }
 
     /**
-     * 
+     *
      */
     public function about()
     {
@@ -30,7 +30,7 @@ class PageController extends Controller
     }
 
     /**
-     * 
+     *
      */
     public function contact()
     {
@@ -38,7 +38,7 @@ class PageController extends Controller
     }
 
     /**
-     * 
+     *
      */
     public function team()
     {
@@ -54,5 +54,10 @@ class PageController extends Controller
     public function test ()
     {
         return 'test';
+    }
+
+    public function privacypolicy ()
+    {
+        return asset('/pdf/privacypolicy.pdf');
     }
 }
