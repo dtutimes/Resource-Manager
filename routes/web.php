@@ -40,12 +40,10 @@ Route::get('/construction', function () {
 // Society Routes
 Route::group(['prefix' => 'societies'], function () {
     // Index of Society
-    Route::view('/', 'societies.index')->name('societies.index');
+    Route::get('/', 'SocietyController@index')->name('societies.index');
     // Society Single
-    Route::get('/single/{id}', function ($id) {
-        $base = 'societies.single.'.$id;
-        return view($base);
-    });
+    Route::get('/{slug}', 'SocietyController@show');
+    
 
 });
 
