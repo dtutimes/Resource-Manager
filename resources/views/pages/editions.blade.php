@@ -75,20 +75,19 @@
 						</div>
 
 						<div id="portfolio" class="portfolio grid-container portfolio-3 portfolio-masonry clearfix">
-							<div class="portfolio-item">
-								<div class="book-wrap">
-									<div class="book-card">
-										<a href="editions/48" class="item-quick-view book-image" data-lightbox="ajax"><img src="img/48.png" alt="Book Image"></a>
-										<div class="book-detail">
-											<h2 class="book-title"><a>Edition 48</a></h2>
-											<small class="book-category"><a href="edition48.pdf">Aug'19-Oct'19</a></small>
-											<div class="button button-white button-light capitalize button-circle"><i class="icon-line-zoom-in"></i><span>view the edtion</span></div>
+							<div id="portfolio" class="portfolio grid-container portfolio-3 portfolio-masonry clearfix">
+								<div class="portfolio-item">
+									<div class="book-wrap">
+										<div class="book-card">
+											<a href="editions/48" class="item-quick-view book-image" data-lightbox="ajax"><img src="img/48.png" alt="Book Image"></a>
+											<div class="book-detail">
+												<h2 class="book-title"><a>Edition 48</a></h2>
+												<small class="book-category"><a href="edition48.pdf">Aug'19-Oct'19</a></small>
+												<div class="button button-white button-light capitalize button-circle"><i class="icon-line-zoom-in"></i><span>view the edtion</span></div>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-
-						<div id="portfolio" class="portfolio grid-container portfolio-3 portfolio-masonry clearfix">
 							<div class="portfolio-item">
 								<div class="book-wrap">
 									<div class="book-card">
