@@ -56,6 +56,17 @@ Route::group(['prefix' => 'manage', 'middleware' => ['role:superuser', 'CheckBlo
     // Dashboard
     Route::get('/', 'User\SuperuserController@index')->name('superuser.dashboard');
 
+    // Edition
+    Route::group(['prefix' => 'edition'], function () {
+            Route::get('/', 'EditionController@index')->name('edition.index');
+            Route::get('/create','EditionController@create')->name('edition.create');
+            Route::post('/', 'EditionController@store')->name('edition.store');
+            Route::get('/{id}','EditionController@show')->name('edition.show');
+            Route::get('/{id}/edit', 'EditionController@edit')->name('edition.edit');
+            Route::put('/{id}', 'EditionController@update')->name('edition.update');
+            Route::delete('/{id}', 'EditionController@destroy')->name('edition.destroy');
+        });
+
     // Roles
     Route::group(['prefix' => 'roles'], function () {
         Route::get('/', 'RoleController@index')->name('roles.index');
