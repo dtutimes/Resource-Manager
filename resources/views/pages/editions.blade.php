@@ -75,7 +75,6 @@
 						</div>
 
 						<div id="portfolio" class="portfolio grid-container portfolio-3 portfolio-masonry clearfix">
-							<div id="portfolio" class="portfolio grid-container portfolio-3 portfolio-masonry clearfix">
 								<div class="portfolio-item">
 									<div class="book-wrap">
 										<div class="book-card">
