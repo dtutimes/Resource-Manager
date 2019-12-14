@@ -307,6 +307,28 @@
 
                 <li class="dropdown">
                     <span class="dropdown__trigger">
+                        Edition
+                    </span>
+                    <div class="dropdown__container">
+                        <div class="dropdown__content">
+                            <ul class="menu-vertical">
+                                <li>
+                                    <a href="{{ route('edition.index') }}" class="text-white">
+                                        All Edition
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('edition.create') }}" class="text-white">
+                                        Create New Edition
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="dropdown">
+                    <span class="dropdown__trigger">
                         Role
                     </span>
                     <div class="dropdown__container">
@@ -326,6 +348,7 @@
                         </div>
                     </div>
                 </li>
+
 
                 <li class="dropdown">
                     <span class="dropdown__trigger">
