@@ -185,7 +185,7 @@
 								<div class="fbox-icon">
 									<a href="https://www.facebook.com/dtutimes"><i class="icon-facebook2"></i></a>
 								</div>
-								<h3>Follow us on Facebook<span class="subtitle">25K Likes</span></h3>
+								<h3>Follow us on Facebook<span class="subtitle">21K Likes</span></h3>
 							</div>
 						</div>
 
@@ -194,7 +194,7 @@
 								<div class="fbox-icon">
 									<a href="http://www.instagram.com/dtu_times"><i class="icon-instagram2"></i></a>
 								</div>
-								<h3>Follow us on Instagram<span class="subtitle">5.2K Followers</span></h3>
+								<h3>Follow us on Instagram<span class="subtitle">3.3K Followers</span></h3>
 							</div>
 						</div>
 
@@ -342,6 +342,21 @@
 		<div class="container">
 			<div id="oc-portfolio" class="owl-carousel portfolio-carousel carousel-widget" data-margin="20" data-loop="true" data-nav="true"
 			 data-pagi="true" data-items-xxs="1" data-items-xs="2" data-items-sm="3" data-items-md="3" data-items-lg="4">
+			 	<div class="oc-item">
+					<a href="{{ route ('editions') }}">
+						<div class="entry clearfix">
+							<div class="entry-image">
+								<img class="image_fade" src="/img/47.png" alt="Standard Post with Image">
+							</div>
+							<div class="entry-title">
+								<h2><a href="{{ route('editions') }}">Edition 47</a></h2>
+							</div>
+							<div class="entry-content">
+								<a href="{{ route('editions') }}" class="more-link">Read More</a>
+							</div>
+						</div>
+					</a>
+				</div>
 
 			 	<div class="oc-item">
 					<a href="{{ route ('editions') }}">

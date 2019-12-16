@@ -346,6 +346,22 @@
 					<a href="{{ route ('editions') }}">
 						<div class="entry clearfix">
 							<div class="entry-image">
+								<img class="image_fade" src="/img/48.png" alt="Standard Post with Image">
+							</div>
+							<div class="entry-title">
+								<h2><a href="{{ route('editions') }}">Edition 48</a></h2>
+							</div>
+							<div class="entry-content">
+								<a href="{{ route('editions') }}" class="more-link">Read More</a>
+							</div>
+						</div>
+					</a>
+				</div>
+
+			 	<div class="oc-item">
+					<a href="{{ route ('editions') }}">
+						<div class="entry clearfix">
+							<div class="entry-image">
 								<img class="image_fade" src="/img/47.png" alt="Standard Post with Image">
 							</div>
 							<div class="entry-title">
