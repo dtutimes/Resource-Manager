@@ -5,13 +5,21 @@
 @section('content') 
 		<!-- Page Title
 		============================================= -->
-		<section id="page-title">
-
-			<div class="container clearfix">
-				<h1>{{$society->name}}</h1>
-			</div>
-
-		</section><!-- #page-title end -->
+		<section id="page-title" class="pt-5 pb-5 border--bottom">
+	        <div class="container clearfix">
+	            <div class="row justify-content-around">
+	                <div class="col-md-5 col-lg-5">
+	                    <h1>{{$society->name}}</h1>
+	                </div>
+	                <div class="col-md-3 col-lg-3">
+	                    <img class="image--sm" src="{{$society->getFirstMediaUrl('soc_logo')}}" alt="">
+	                </div>
+	            </div>
+	            <!--end of row-->
+	        </div>
+	        <!--end of container-->
+    	</section>
+    	<!-- #page-title end -->
 
 		<!-- Content
 		============================================= -->
@@ -26,9 +34,9 @@
 						<div class="fslider customjs bottommargin-sm">
 							<div class="flexslider" id="slider">
 								<div class="slider-wrap">
-									{{$images = $society->getMedia('soc_logo')}}
+									<div class="slide"><img src="{{$society->getFirstMediaUrl('soc_logo')}}" alt="Image"></div>
 									@foreach ($images as $image)
-									<div class="slide"><img src="{{image}}" alt="Image"></div>
+									<div class="slide"><img src="{{$image->getUrl()}}" alt="Image"></div>
 									@endforeach
 								</div>
 							</div>
@@ -37,9 +45,9 @@
 						<div class="fslider customjs bottommargin-sm">
 							<div class="flexslider" id="carousel">
 								<div class="slider-wrap">
-									{{$images = $society->getMedia('soc_logo')}}
+									<div class="slide"><img src="{{$society->getFirstMediaUrl('soc_logo')}}" alt="Image"></div>
 									@foreach ($images as $image)
-									<div class="slide"><img src="{{image}}" alt="Image"></div>
+									<div class="slide"><img src="{{$image->getUrl()}}" alt="Image"></div>
 									@endforeach
 								</div>
 							</div>

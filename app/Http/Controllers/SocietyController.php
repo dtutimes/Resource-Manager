@@ -50,7 +50,13 @@ class SocietyController extends Controller
     public function show($slug)
     {
         $society = Society::where(['slug'=> $slug, 'status' => 'published'])->firstOrFail();
-        return view('societies.show', ['society' => $society]);
+
+        $images = $society->getMedia('soc_images');
+
+        return view('societies.show', [
+            'society' => $society,
+            'images'   => $images
+        ]);
     }
 
     /**
