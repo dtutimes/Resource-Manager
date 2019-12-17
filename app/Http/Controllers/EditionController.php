@@ -121,4 +121,18 @@ class EditionController extends Controller
         session()->flash('success', $name.', Deleted!');
         return redirect()->route('edition.index');
     }
+
+    public function showEdition()
+    {
+        $editions = Edition::latest()->get();
+
+        return view('edition.showEdition', ['editions' => $editions]);
+    }
+
+    public function showSingle($id)
+    {
+        $edition = Edition::whereid($id)->firstOrFail();
+        
+        return $edition->link;
+    }
 }
