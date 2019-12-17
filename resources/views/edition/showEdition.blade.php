@@ -81,7 +81,7 @@
 								<div class="portfolio-item">
 									<div class="book-wrap">
 										<div class="book-card">
-											<a href="{{$editions[$count]->link}}" class="item-quick-view book-image" data-lightbox="ajax"><img src="{{ $editions[$count]->getFirstMediaUrl('covers', 'cover')}}" alt="Book Image"></a>
+											<a href="{{$editions[$count]->id}}" class="item-quick-view book-image" data-lightbox="ajax"><img src="{{ $editions[$count]->getFirstMediaUrl('covers', 'cover')}}" alt="Book Image"></a>
 											<div class="book-detail">
 												<h2 class="book-title"><a>{{$editions[$count]->name}}</a></h2>
 												<div class="button button-white button-light capitalize button-circle"><i class="icon-line-zoom-in"></i><span>view the edtion</span></div>
@@ -111,7 +111,7 @@
 							<div class="entry clearfix">
 								<div class="book-wrap">
 									<div class="book-card">
-										<a href="{{$editions[$count]->link}}" class="item-quick-view book-image" data-lightbox="ajax"><img src="{{ $editions[$count]->getFirstMediaUrl('covers', 'cover')}}" alt="Book Image"></a>
+										<a href="{{$editions[$count]->id}}" class="item-quick-view book-image" data-lightbox="ajax"><img src="{{ $editions[$count]->getFirstMediaUrl('covers', 'cover')}}" alt="Book Image"></a>
 										<div class="book-detail">
 											<h2 class="book-title"><a>{{$editions[$count]->name}}</a></h2>
 											<div class="button button-white button-light capitalize button-circle"><i class="icon-line-zoom-in"></i><span>view the edtion</span></div>
