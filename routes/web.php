@@ -15,7 +15,6 @@ Route::get('/', 'PageController@welcome')->name('welcome');
 Route::get('/about', 'PageController@about')->name('about');
 Route::get('/contact', 'PageController@contact')->name('contact');
 Route::get('/team', 'PageController@team')->name('team');
-Route::get('/editions', 'PageController@editions')->name('editions');
 Route::get('/test', 'PageController@test');
 Route::get('/privacypolicy', 'PageController@privacypolicy');
 
@@ -47,8 +46,10 @@ Route::group(['prefix' => 'societies'], function () {
 
 });
 
-Route::get('/tracking/societies/referrals/{slug}', 'TrackingController@trackReferrals')->name('track.society.referrals');
 
+
+
+Route::get('/tracking/societies/referrals/{slug}', 'TrackingController@trackReferrals')->name('track.society.referrals');
 
 // Superuser Routes
 Route::group(['prefix' => 'manage', 'middleware' => ['role:superuser', 'CheckBlockedUser', 'checkActivatedUser']], function() {
@@ -65,6 +66,18 @@ Route::group(['prefix' => 'manage', 'middleware' => ['role:superuser', 'CheckBlo
             Route::get('/{id}/edit', 'EditionController@edit')->name('edition.edit');
             Route::put('/{id}', 'EditionController@update')->name('edition.update');
             Route::delete('/{id}', 'EditionController@destroy')->name('edition.destroy');
+        });
+    
+    //Facebook Instagram API Routes
+
+    Route::group(['prefix' => 'facebook'], function () {
+            Route::get('/', 'FacebookController@index')->name('facebook.index');
+            Route::get('/info','FacebookController@info')->name('facebook.info');
+        });
+
+    Route::group(['prefix' => 'instagram'], function () {
+            Route::get('/', 'InstagramController@index')->name('instagram.index');
+            Route::get('/info','InstagramController@info')->name('instagram.info');
         });
 
     // Roles
@@ -202,10 +215,8 @@ Route::group(['prefix' => 'gallery'], function () {
 });
 
 Route::group(['prefix' => 'editions'], function () {
-    Route::get('/{id}', function ($id) {
-        $base = 'ajax.'.$id;
-        return view($base);
-    });
+    Route::get('/', 'EditionController@showEdition')->name('editions');
+    Route::get('/{id}', 'EditionController@showSingle')->name('editions.show');
 });
 
 
