@@ -46,6 +46,9 @@ Route::group(['prefix' => 'societies'], function () {
 
 });
 
+
+
+
 Route::get('/tracking/societies/referrals/{slug}', 'TrackingController@trackReferrals')->name('track.society.referrals');
 
 // Superuser Routes
@@ -65,6 +68,17 @@ Route::group(['prefix' => 'manage', 'middleware' => ['role:superuser', 'CheckBlo
             Route::delete('/{id}', 'EditionController@destroy')->name('edition.destroy');
         });
     
+    //Facebook Instagram API Routes
+
+    Route::group(['prefix' => 'facebook'], function () {
+            Route::get('/', 'FacebookController@index')->name('facebook.index');
+            Route::get('/info','FacebookController@info')->name('facebook.info');
+        });
+
+    Route::group(['prefix' => 'instagram'], function () {
+            Route::get('/', 'InstagramController@index')->name('instagram.index');
+            Route::get('/info','InstagramController@info')->name('instagram.info');
+        });
 
     // Roles
     Route::group(['prefix' => 'roles'], function () {

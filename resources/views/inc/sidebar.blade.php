@@ -329,6 +329,50 @@
 
                 <li class="dropdown">
                     <span class="dropdown__trigger">
+                        Facebook Post 
+                    </span>
+                    <div class="dropdown__container">
+                        <div class="dropdown__content">
+                            <ul class="menu-vertical">
+                                <li>
+                                    <a href="{{ route('facebook.index') }}" class="text-white">
+                                        All Post
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('facebook.info') }}" class="text-white">
+                                        Info
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="dropdown">
+                    <span class="dropdown__trigger">
+                        Instagram Post 
+                    </span>
+                    <div class="dropdown__container">
+                        <div class="dropdown__content">
+                            <ul class="menu-vertical">
+                                <li>
+                                    <a href="{{ route('instagram.index') }}" class="text-white">
+                                        All Post
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('instagram.info') }}" class="text-white">
+                                        Info
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="dropdown">
+                    <span class="dropdown__trigger">
                         Role
                     </span>
                     <div class="dropdown__container">
