@@ -13,6 +13,11 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['prefix' => 'blog'], function() {
+    Route::get('/', 'api\BlogController@index');
+    // Route::group(['prefix' => 'categories'], function () {
+    //     Route::get('/', 'BlogController@indexCategory')->name('blog.categories.index');
+    //     Route::get('/{slug}', 'BlogController@showCategory')->name('blog.categories.show');
+    // });
+    Route::get('/{slug}', 'api\BlogController@show');
 });

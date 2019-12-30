@@ -21,15 +21,3 @@ require('./js/spectragram.min.js');
 require('./js/smooth-scroll.min.js');
 require('./js/scripts.js');
 
-
-$(document).ready(function () {
-    $('.tab__content section.switchable').mouseenter(function () {
-        $(this).append('<div class="switchable-toggle label">Switch Sides</div>');
-    });
-    $('.tab__content section.switchable').mouseleave(function () {
-        $(this).find('.switchable-toggle').remove();
-    });
-    $(document).on('click', '.switchable-toggle', function () {
-        $(this).closest('section').toggleClass('switchable--switch');
-    });
-});

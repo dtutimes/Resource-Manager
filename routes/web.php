@@ -117,7 +117,8 @@ Route::group(['prefix' => 'manage', 'middleware' => ['role:superuser', 'CheckBlo
         Route::get('/{uuid}/role', 'User\SuperuserController@editRoleUser')->name('users.role.edit');
         Route::post('/{uuid}/role', 'User\SuperuserController@updateRoleUser')->name('users.role.update');
         Route::delete('/{uuid}', 'User\SuperuserController@destroyUser')->name('users.destroy');
-    });
+    });  
+    
 });
 
 // Council Routes
@@ -191,6 +192,12 @@ Route::group(['prefix' => 'council', 'middleware' => ['role:council|superuser|co
 
     });
 
+    Route::group(['prefix' => 'notifications'], function () {
+        Route::get('/', 'NotificationController@index')->name('notifications.index');
+        Route::get('/create', 'NotificationController@create')->name('notifications.create');
+        Route::post('/', 'NotificationController@store')->name('notifications.store');
+
+    });
     // Stats
     Route::group(['prefix' => 'stats'], function () {
         Route::get('/stories', 'StatsController@indexStories')->name('stats.stories');

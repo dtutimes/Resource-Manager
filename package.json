@@ -16,6 +16,8 @@
     },
     "dependencies": {
         "@ckeditor/ckeditor5-build-classic": "^11.1.1",
-        "jquery": "^3.3.1"
+        "jquery": "^3.3.1",
+        "laravel-echo": "^1.5.2",
+        "pusher-js": "^4.3.1"
     }
 }
