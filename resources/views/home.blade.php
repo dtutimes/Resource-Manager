@@ -9,7 +9,7 @@
         <div class="row justify-content-center" >
             <div class="col-md-4 col-lg-4 text-center" >
 
-              <h1 style="font-family: 'Rajdhani', sans-serif; color:white; font-size:20rem;"> डैशबोर्ड </h1>
+              <h1 style="font-family: 'Rajdhani', sans-serif; color:white; font-size:8rem;"> डैशबोर्ड </h1>
             </div>
         </div>
      </div>

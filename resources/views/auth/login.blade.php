@@ -7,7 +7,7 @@
         <div class="row justify-content-center" >
             <div class="col-md-4 col-lg-4" >
 
-                <form method="POST" action="{{ route('login') }}" class="row ml-auto mt-0">
+                <form method="POST" action="{{ route('login.post') }}" class="row ml-auto mt-0">
                     @csrf
 
                         <div class="col-md-12 text-center">

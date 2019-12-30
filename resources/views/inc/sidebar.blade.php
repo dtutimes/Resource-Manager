@@ -1,7 +1,7 @@
 <div class="nav-container nav-container--sidebar">
-    <div class="nav-sidebar-column" style="background-color: #3590F3; color:white !important;">
+    <div class="nav-sidebar-column bg--dark">
         <div class="text-center text-block">
-            <a href="{{ route('welcome') }}">
+            <a href="{{ route('login') }}">
                 <img alt="avatar" src="{{ asset('img/logo-light.png') }}" class="image--md" />
             </a>
             <div class="text-center space--xs mt-1">

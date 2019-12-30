@@ -1,6 +1,7 @@
 @extends('layouts.app')
  
 @section('content')
+
 <!-- Page Title
         ============================================= -->
 <section id="page-title">

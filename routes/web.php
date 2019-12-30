@@ -12,19 +12,10 @@
 */
 
 Route::get('/', 'PageController@welcome')->name('welcome');
-Route::get('/about', 'PageController@about')->name('about');
-Route::get('/contact', 'PageController@contact')->name('contact');
-Route::get('/team', 'PageController@team')->name('team');
-Route::get('/test', 'PageController@test');
-Route::get('/privacypolicy', 'PageController@privacypolicy');
-
-
-// Join the newsletter
-Route::post('/subscribe', 'Email\SubscriberController@join')->name('subscribers.join');
 
 // Login
-Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
-Route::post('/login', 'Auth\LoginController@login');
+Route::get('/', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('/', 'Auth\LoginController@login')->name('login.post');
 
 // Password Reset
 Route::post('/password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
@@ -36,15 +27,6 @@ Route::get('/construction', function () {
     return view('errors.503');
 })->name('under.construction');
 
-// Society Routes
-Route::group(['prefix' => 'societies'], function () {
-    // Index of Society
-    Route::get('/', 'SocietyController@index')->name('societies.index');
-    // Society Single
-    Route::get('/{slug}', 'SocietyController@show');
-    
-
-});
 
 
 
@@ -204,28 +186,6 @@ Route::group(['prefix' => 'council', 'middleware' => ['role:council|superuser|co
         Route::get('/albums', 'StatsController@indexAlbums')->name('stats.albums');
     });
 });
-
-// Blog routes
-Route::group(['prefix' => 'blog'], function() {
-    Route::get('/', 'BlogController@index')->name('blog.index');
-    Route::group(['prefix' => 'categories'], function () {
-        Route::get('/', 'BlogController@indexCategory')->name('blog.categories.index');
-        Route::get('/{slug}', 'BlogController@showCategory')->name('blog.categories.show');
-    });
-    Route::get('/{slug}', 'BlogController@show')->name('blog.show');
-});
-
-// Gallery routes
-Route::group(['prefix' => 'gallery'], function () {
-    Route::get('/', 'GalleryController@index')->name('gallery.index');
-    Route::get('/{slug}', 'GalleryController@show')->name('gallery.show');
-});
-
-Route::group(['prefix' => 'editions'], function () {
-    Route::get('/', 'EditionController@showEdition')->name('editions');
-    Route::get('/{id}', 'EditionController@showSingle')->name('editions.show');
-});
-
 
 Route::middleware('auth')->group(function () {
     Route::get('/me/info', 'User\UserController@info')->name('me.info');
