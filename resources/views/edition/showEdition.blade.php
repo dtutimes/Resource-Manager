@@ -22,8 +22,12 @@
 				<div class="container dark clearfix">
 					<div class="row clearfix">
 						<div class="col-md-6 col-md-offset-1 col-sm-8" data-lightbox="gallery">
+							@if($editions->count()>0)
 							<a href="{{$editions[0]->getFirstMediaUrl('covers', 'cover')}}" data-lightbox="gallery-item" class="slider-book-img" data-animate="fadeInUp"><img src="{{$editions[0]->getFirstMediaUrl('covers', 'cover')}}" alt=""></a>
+							@endif
+							@if($editions->count()>1)
 							<a href="{{$editions[1]->getFirstMediaUrl('covers', 'cover')}}" data-lightbox="gallery-item" class="slider-book-img" data-animate="fadeInUp"><img src="{{$editions[1]->getFirstMediaUrl('covers', 'cover')}}" alt=""></a>
+							@endif
 							<div class="emphasis-title bottommargin-sm">
 								<h1 class="400" data-animate="fadeInUp" data-delay="600">Read the Latest Print Editions by<br><span><em>DTU Times</em></span>.</h1>
 							</div>
