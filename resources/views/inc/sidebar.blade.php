@@ -2,7 +2,7 @@
     <div class="nav-sidebar-column bg--dark">
         <div class="text-center text-block">
             <a href="{{ route('login') }}">
-                <img alt="avatar" src="{{ asset('img/logo-light.png') }}" class="image--md" />
+                <img alt="avatar" src="{{ asset('logo-light.png') }}" class="image--md" />
             </a>
             <div class="text-center space--xs mt-1">
                 <div>

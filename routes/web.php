@@ -11,8 +11,6 @@
 |
 */
 
-Route::get('/', 'PageController@welcome')->name('welcome');
-
 // Login
 Route::get('/', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('/', 'Auth\LoginController@login')->name('login.post');

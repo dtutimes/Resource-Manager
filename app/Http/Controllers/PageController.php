@@ -13,51 +13,9 @@ class PageController extends Controller
         $this->report = $report;
     }
 
-    /**
-     *
-     */
-    public function welcome()
-    {
-        return view('pages.welcome');
-    }
-
-    /**
-     *
-     */
-    public function about()
-    {
-        return view('pages.about');
-    }
-
-    /**
-     *
-     */
-    public function contact()
-    {
-        return view('pages.contact');
-    }
-
-    /**
-     *
-     */
-    public function team()
-    {
-        return view('pages.team');
-    }
-
-     public function editions()
-    {
-        return view('pages.editions');
-    }
-
 
     public function test ()
     {
         return 'test';
-    }
-
-    public function privacypolicy ()
-    {
-        return redirect('http://dtutimes.live/pdf/privacypolicy.pdf');
     }
 }
