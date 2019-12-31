@@ -15,6 +15,7 @@ class SocietyController extends Controller
      */
     public function index()
     {
+        return view('errors.503');
         $societies = Society::where('status','published')->get();
 
         return view('societies.index',['societies' => $societies]);

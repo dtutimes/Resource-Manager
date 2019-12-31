@@ -23,8 +23,11 @@ Route::get('/privacypolicy', 'PageController@privacypolicy');
 Route::post('/subscribe', 'Email\SubscriberController@join')->name('subscribers.join');
 
 // Login
-Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
-Route::post('/login', 'Auth\LoginController@login');
+Route::get('/login', function () {
+    return redirect('https://app.dtutimes.com/');
+})->name('login');
+// Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
+// Route::post('/login', 'Auth\LoginController@login');
 
 // Password Reset
 Route::post('/password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');

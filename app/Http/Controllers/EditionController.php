@@ -14,6 +14,7 @@ class EditionController extends Controller
      */
     public function index()
     {
+        return view('errors.503');
         $editions = Edition::all();
         return view('edition.index', ['editions' => $editions]);
     }
@@ -124,6 +125,7 @@ class EditionController extends Controller
 
     public function showEdition()
     {
+        return view('errors.503');
         $editions = Edition::latest()->get();
 
         return view('edition.showEdition', ['editions' => $editions]);
