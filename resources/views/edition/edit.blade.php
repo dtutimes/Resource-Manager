@@ -29,6 +29,12 @@
                             </div>
 
                             <div class="col-md-12">
+                                <label>AJAX Code</label>
+                                <input type="text" name="ajax" placeholder="{{$edition->ajax}}" class="validate-required" value="{{ old('ajax') ? old('ajax') : $edition->ajax }}"
+                                    />
+                            </div>
+
+                            <div class="col-md-12">
                                 <label for="">Cover</label>
                                 <input type="file" name="cover" id="">
                             </div>

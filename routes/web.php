@@ -48,7 +48,6 @@ Route::group(['prefix' => 'societies'], function () {
 
 
 
-
 Route::get('/tracking/societies/referrals/{slug}', 'TrackingController@trackReferrals')->name('track.society.referrals');
 
 // Superuser Routes
@@ -63,6 +62,7 @@ Route::group(['prefix' => 'manage', 'middleware' => ['role:superuser', 'CheckBlo
             Route::get('/create','EditionController@create')->name('edition.create');
             Route::post('/', 'EditionController@store')->name('edition.store');
             Route::get('/{id}','EditionController@show')->name('edition.show');
+            Route::get('/show/{id}','EditionController@showajax')->name('edition.showajax');
             Route::get('/{id}/edit', 'EditionController@edit')->name('edition.edit');
             Route::put('/{id}', 'EditionController@update')->name('edition.update');
             Route::delete('/{id}', 'EditionController@destroy')->name('edition.destroy');
