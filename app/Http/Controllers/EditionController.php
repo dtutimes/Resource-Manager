@@ -39,7 +39,8 @@ class EditionController extends Controller
     {
         $edition = Edition::create([
             'name' => $request->name,
-            'link' => $request->link
+            'link' => $request->link,
+            'ajax' => $request->ajax
         ]);
         if ($request->hasFile('cover'))
         {
@@ -87,7 +88,8 @@ class EditionController extends Controller
     {
         $data = [
             'name' => $request->name,
-            'link' => $request->link
+            'link' => $request->link,
+            'ajax' => $request->ajax
         ];
 
         $edition = Edition::where('id' , $id)->firstOrFail();
@@ -135,6 +137,13 @@ class EditionController extends Controller
     {
         $edition = Edition::whereid($id)->firstOrFail();
         
-        return $edition->link;
+        return $edition->ajax;
+    }
+
+    public function showajax($id)
+    {
+        $edition = Edition::whereid($id)->firstOrFail();
+        
+        return $edition->ajax;
     }
 }
